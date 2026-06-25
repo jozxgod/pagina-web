@@ -1,35 +1,23 @@
-import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useFetch from '../hooks/useFetch'
 
 function Listado() {
-  const [recetas, setRecetas] = useState([])
-  const [cargando, setCargando] = useState(true)
   const navigate = useNavigate()
-
-  useEffect(() => {
-    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
-      .then(res => res.json())
-      .then(data => {
-        setRecetas(data.meals)
-        setCargando(false)
-      })
-  }, [])
+  const { data, cargando } = useFetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
+  const recetas = data?.meals || []
 
   return (
-    <main className="bg-[#FAF7F2] min-h-screen px-16 py-12">
-      
-      {/* Encabezado */}
+    <main className="bg-[#FAF7F2] min-h-screen px-4 md:px-16 py-12">
       <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Catálogo global</p>
-      <h1 className="text-5xl font-black mb-2">Todas las Recetas</h1>
+      <h1 className="text-4xl md:text-5xl font-black mb-2">Todas las Recetas</h1>
       <p className="text-gray-500 mb-10">Navega, filtra y descubre platillos de los cinco continentes.</p>
 
-      {/* Grid de recetas */}
       {cargando ? (
-        <p className="text-center text-gray-500">Cargando recetas...</p>
+        <p className="text-center text-gray-500 py-20">Cargando recetas...</p>
       ) : (
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {recetas.map(receta => (
-            <div 
+            <div
               key={receta.idMeal}
               className="cursor-pointer group"
               onClick={() => navigate(`/detalle/${receta.idMeal}`)}
@@ -49,7 +37,6 @@ function Listado() {
           ))}
         </div>
       )}
-
     </main>
   )
 }
