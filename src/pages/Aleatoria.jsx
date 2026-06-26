@@ -89,17 +89,18 @@ function Aleatoria() {
           </div>
 
           {/* Video */}
+          {/* Video */}
           {receta.strYoutube && (
             <div className="border-t border-gray-200 pt-8">
               <h3 className="font-black text-lg mb-6">Video de la receta</h3>
-              <iframe
-                width="640"
-                height="360"
-                src={`https://www.youtube.com/embed/${receta.strYoutube.split('v=')[1]}`}
-                title={receta.strMeal}
-                allowFullScreen
-                className="border-0 w-full md:w-auto"
-              ></iframe>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                  src={`https://www.youtube.com/embed/${receta.strYoutube.split('v=')[1]}`}
+                  title={receta.strMeal}
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           )}
 

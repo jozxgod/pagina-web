@@ -11,7 +11,6 @@ function Filtrado() {
   const [areaSeleccionada, setAreaSeleccionada] = useState('')
   const navigate = useNavigate()
 
-  // Cargar categorías y áreas al inicio
   useEffect(() => {
     fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
       .then(res => res.json())
@@ -21,13 +20,11 @@ function Filtrado() {
       .then(res => res.json())
       .then(data => setAreas(data.meals))
 
-    // Cargar recetas iniciales
     fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
       .then(res => res.json())
       .then(data => setRecetas(data.meals || []))
   }, [])
 
-  // Buscar por nombre
   const buscarPorNombre = () => {
     if (!busqueda.trim()) return
     setCargando(true)
@@ -39,7 +36,6 @@ function Filtrado() {
       })
   }
 
-  // Filtrar por categoría
   const filtrarPorCategoria = (categoria) => {
     setCategoriaSeleccionada(categoria)
     setCargando(true)
@@ -51,7 +47,6 @@ function Filtrado() {
       })
   }
 
-  // Filtrar por área
   const filtrarPorArea = (area) => {
     setAreaSeleccionada(area)
     setCargando(true)
@@ -64,18 +59,17 @@ function Filtrado() {
   }
 
   return (
-    <main className="bg-[#FAF7F2] min-h-screen px-16 py-12">
+    <main className="bg-[#FAF7F2] min-h-screen px-4 md:px-16 py-12">
 
-      {/* Encabezado */}
       <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Catálogo global</p>
-      <h1 className="text-5xl font-black mb-2">Todas las Recetas</h1>
+      <h1 className="text-4xl md:text-5xl font-black mb-2">Todas las Recetas</h1>
       <p className="text-gray-500 mb-8">Navega, filtra y descubre platillos de los cinco continentes.</p>
 
       {/* Formulario de filtros */}
       <div className="bg-black text-white p-6 mb-8">
         <p className="text-xs uppercase tracking-widest mb-4">▼ FILTRAR RECETAS</p>
-        
-        <div className="grid grid-cols-3 gap-6">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Buscar por nombre */}
           <div>
             <p className="text-xs uppercase tracking-widest mb-2">BUSCAR</p>
@@ -137,9 +131,9 @@ function Filtrado() {
 
       {/* Resultados */}
       {cargando ? (
-        <p className="text-center text-gray-500">Cargando recetas...</p>
+        <p className="text-center text-gray-500 py-20">Cargando recetas...</p>
       ) : (
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {recetas.map(receta => (
             <div
               key={receta.idMeal}
