@@ -20,6 +20,7 @@ function Navbar() {
         <Link to="/info-api" className="px-4 py-2 hover:bg-black hover:text-white transition-colors">API</Link>
         <Link to="/dev-team" className="px-4 py-2 hover:bg-black hover:text-white transition-colors">Equipo</Link>
         <Link to="/filtrado" className="px-4 py-2 hover:bg-black hover:text-white transition-colors">Filtrado</Link>
+        <Link to="/aleatoria" className="px-4 py-2 hover:bg-black hover:text-white transition-colors">🎲 Aleatoria</Link>
       </div>
 
       {/* Botón escritorio */}

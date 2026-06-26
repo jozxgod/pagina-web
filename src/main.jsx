@@ -9,6 +9,7 @@ import InfoAPI from './pages/InfoAPI'
 import DevTeam from './pages/DevTeam'
 import Detalle from './pages/Detalle'
 import Navbar from './components/Navbar'
+import Aleatoria from './pages/Aleatoria'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/info-api" element={<InfoAPI />} />
         <Route path="/dev-team" element={<DevTeam />} />
         <Route path="/detalle/:id" element={<Detalle />} />
+        <Route path="/aleatoria" element={<Aleatoria />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
