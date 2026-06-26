@@ -44,6 +44,7 @@ function Navbar() {
           <Link to="/info-api" onClick={() => setMenuAbierto(false)} className="px-8 py-4 hover:bg-black hover:text-white transition-colors">API</Link>
           <Link to="/dev-team" onClick={() => setMenuAbierto(false)} className="px-8 py-4 hover:bg-black hover:text-white transition-colors">Equipo</Link>
           <Link to="/filtrado" onClick={() => setMenuAbierto(false)} className="px-8 py-4 hover:bg-black hover:text-white transition-colors">Filtrado</Link>
+          <Link to="/aleatoria" onClick={() => setMenuAbierto(false)} className="px-8 py-4 hover:bg-black hover:text-white transition-colors">🎲 Aleatoria</Link>
         </div>
       )}
 
