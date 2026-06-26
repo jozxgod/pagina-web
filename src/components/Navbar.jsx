@@ -9,7 +9,7 @@ function Navbar() {
 
       {/* Logo */}
       <div className="flex items-center gap-2">
-        <span className="font-black text-xl tracking-tight">MUNDI</span>
+        <span className="font-black text-xl tracking-tight">KORÜ</span>
         <span className="text-xs border border-gray-400 px-1">BETA</span>
       </div>
 

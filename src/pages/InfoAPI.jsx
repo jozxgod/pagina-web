@@ -56,11 +56,11 @@ function InfoAPI() {
       {/* Encabezado */}
       <h1 className="text-6xl font-black mb-2">
         The <br />
-        <span className="text-red-500">MealDB</span>
+        <span className="text-red-500">Korü</span>
       </h1>
       <p className="text-gray-600 max-w-2xl mb-12">
-        TheMealDB es una base de datos abierta de recetas del mundo, mantenida por la comunidad 
-        y accesible gratuitamente a través de su API REST pública. MUNDI consume y enriquece 
+        Korü es una base de datos abierta de recetas del mundo, mantenida por la comunidad 
+        y accesible gratuitamente a través de su API REST pública. Korü consume y enriquece 
         estos datos para ofrecer una experiencia más completa en español.
       </p>
 
@@ -68,7 +68,7 @@ function InfoAPI() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-300 mb-16">
         <div className="p-8 border-b md:border-b-0 md:border-r border-gray-300">
           <div className="w-1 h-6 bg-red-500 mb-4"></div>
-          <h2 className="font-black text-lg mb-2">¿Qué es TheMealDB?</h2>
+          <h2 className="font-black text-lg mb-2">¿Qué es Korü?</h2>
           <p className="text-gray-600 text-sm">
             Una enciclopedia culinaria colaborativa con miles de recetas de todo el mundo. 
             Incluye ingredientes, instrucciones paso a paso, imágenes y links a videos de YouTube.

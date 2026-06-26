@@ -153,7 +153,7 @@ function Home() {
             <span className="text-yellow-400">RECETA</span> QUE FALTA?
           </h2>
           <p className="text-gray-400 max-w-md">
-            MUNDI es un proyecto colaborativo. Añade recetas, corrige ingredientes y sube fotos.
+            Korü es un proyecto colaborativo. Añade recetas, corrige ingredientes y sube fotos.
           </p>
         </div>
         <div className="flex flex-col gap-4">
@@ -173,7 +173,7 @@ function Home() {
       {/* FOOTER */}
       <footer className="bg-[#FAF7F2] border-t border-gray-200 px-4 md:px-16 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-2">
-          <span className="font-black">MUNDI</span>
+          <span className="font-black">Korü</span>
           <span className="text-gray-500 text-sm">Base de datos global de recetas · Código abierto</span>
         </div>
         <div className="flex gap-6 text-sm">

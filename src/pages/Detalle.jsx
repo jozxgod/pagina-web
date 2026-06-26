@@ -8,6 +8,7 @@ function Detalle() {
   const [cargando, setCargando] = useState(true)
 
   useEffect(() => {
+    // URL actualizada a themealdb.com
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then(res => res.json())
       .then(data => {
