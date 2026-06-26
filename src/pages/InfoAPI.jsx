@@ -55,7 +55,6 @@ function InfoAPI() {
 
       {/* Encabezado */}
       <h1 className="text-6xl font-black mb-2">
-        The <br />
         <span className="text-red-500">Korü</span>
       </h1>
       <p className="text-gray-600 max-w-2xl mb-12">
